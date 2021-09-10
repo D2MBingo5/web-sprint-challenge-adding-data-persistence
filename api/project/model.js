@@ -3,7 +3,7 @@ const db = require('../../data/dbConfig')
 function find() {
     return db('projects as p')
     .select('p.*')
-    .groupBy('p.project_id')
+    .orderBy('p.project_id')
 }
 
 function add(project) {

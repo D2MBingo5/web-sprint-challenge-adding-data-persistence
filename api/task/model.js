@@ -2,8 +2,9 @@ const db = require('../../data/dbConfig')
 
 function find() {
     return db('tasks as t')
-    .select('t.*')
-    .groupBy('t.task_id')
+    .leftJoin('projects as p', 'p.project_id', 't.project_id')
+    .select('t.*', 'p.project_name', 'p.project_description')
+    .orderBy('t.task_id')
 }
 
 function add(task) {
