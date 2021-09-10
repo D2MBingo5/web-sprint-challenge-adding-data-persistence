@@ -7,8 +7,7 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "migrate": "knex migrate:latest",
-    "rollback": "knex migrate:rollback",
-    "refresh": "knex migrate:rollback && knex migrate:latest"
+    "rollback": "knex migrate:rollback"
   },
   "repository": {
     "type": "git",
